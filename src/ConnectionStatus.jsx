@@ -23,9 +23,17 @@ class ConnectionStatus extends Component {
     });
   }
   render() {
-    return (
-      <div className="status">{this.state.status}</div>
-    );
+    if (this.state.status === 'online') {
+      return (
+        <div className="status">{this.state.status}</div>
+      );
+    }
+    if (this.state.status === 'offline') {
+      return (
+        <div class="status status_offline">{this.state.status}</div>
+      );
+    }
+    
   }
 }
 
